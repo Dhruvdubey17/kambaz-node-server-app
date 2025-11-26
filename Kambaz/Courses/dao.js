@@ -37,11 +37,14 @@ export default function CoursesDao(db) {
     return course;
   }
 
+  const findUsersByRole = (role) => model.find({ role: role });
+
   return {
     findAllCourses,
     findCoursesForEnrolledUser,
     createCourse,
     deleteCourse,
     updateCourse,
+    findUsersByRole,
   };
 }
